@@ -51,7 +51,7 @@ script(id='partials/options.settings.subscription.html',type='text/ng-template',
 
         .container-fluid.slight-vertical-padding(ng-if='!user.purchased.plan.customerId || (user.purchased.plan.customerId && user.purchased.plan.dateTerminated)')
           small.muted=env.t('subscribeUsing')
-          .row.text-center
+          .row.text-left
             .col-xs-4
               a.purchase.btn.btn-primary(ng-click='Payments.showStripe({subscription:_subscription.key, coupon:_subscription.coupon})', ng-disabled='!_subscription.key')= env.t('card')
             .col-xs-4
